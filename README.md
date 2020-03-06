@@ -21,7 +21,7 @@ https://wireframepro.mockflow.com/view/M1bbd724c2c25f8d5e7f17c27e2537b3e15835198
 
 ## Problem Domain
 
-![Problem Domain](Screen Shot 2020-03-06 at 11.46.19 AM.png)
+![](https://github.com/silasoyewale10/DebtEliminator/blob/developmentBranch/problemdomain.pdf)
 
 ## SCHEMA
 
