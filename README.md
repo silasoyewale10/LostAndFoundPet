@@ -22,7 +22,6 @@ https://wireframepro.mockflow.com/view/M1bbd724c2c25f8d5e7f17c27e2537b3e15835198
 ## Problem Domain
 
 ![](https://github.com/silasoyewale10/DebtEliminator/blob/developmentBranch/problemdomain.pdf)
-![](src/main/resources/assets/code-challenege-06.jpeg)
 
 
 ## SCHEMA
