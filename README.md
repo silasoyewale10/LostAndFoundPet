@@ -20,11 +20,11 @@ https://wireframepro.mockflow.com/view/M1bbd724c2c25f8d5e7f17c27e2537b3e15835198
 
 Schema
 
-type Tasks @model {
+```type Tasks @model {
   id: ID!
   title: String!
   total: int
   monthly: int
   length: int
-}
+}```
 
