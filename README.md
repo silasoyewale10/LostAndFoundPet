@@ -26,5 +26,5 @@ Schema
   total: int
   monthly: int
   length: int
-}```
+}
 
