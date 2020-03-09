@@ -32,18 +32,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/lostbutton"
         android:layout_width="142dp"
         android:layout_height="91dp"
         android:layout_marginTop="72dp"
         android:text="Lost"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/foundbutton"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/foundbutton"
         android:layout_width="149dp"
         android:layout_height="93dp"
         android:layout_marginTop="72dp"
