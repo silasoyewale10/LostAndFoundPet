@@ -40,7 +40,7 @@ type Tasks @model {
 ```
 
 
-**USER STORIES* 
+## USER STORIES
 
 - As a user I want to share a photo of my lost pet
 - As a user I want to share a photo of a found pet
@@ -52,7 +52,7 @@ type Tasks @model {
 - As a user I want to be able to notify or contact another user they may have my lost pet
 
 
-**DEVELOPER STORIES**
+## DEVELOPER STORIES
 
 - As a developer I want to write an application that allows owners of lost pets and found pets to collectively share information in hopes of reuniting families
 - As a developer I want to allow users to safely log-in and store their profile information user AWS Cognitio and an S3 bucket. 
