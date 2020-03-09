@@ -1,4 +1,4 @@
-# WELCOME TO Lost And Found Pet
+# WELCOME TO LOST AND FOUND PET(S)
 
 
 ## Image of Domain Modeling
@@ -36,4 +36,5 @@ type Tasks @model {
   monthly: int
   length: int
 }
+
 
