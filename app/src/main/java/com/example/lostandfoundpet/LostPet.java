@@ -25,7 +25,7 @@ public class LostPet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent sentToAllPetsIntent = new Intent(LostPet.this, AllPets.class);
+                Intent sentToAllPetsIntent = new Intent(LostPet.this, AllFoundPets.class);
 
                 LostPet.this.startActivity(sentToAllPetsIntent);
 
