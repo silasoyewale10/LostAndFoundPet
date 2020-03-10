@@ -17,7 +17,6 @@ public class LostPet extends AppCompatActivity {
 
 
 
-
         // Sends User To ALLPAGE
         Button sendToAllPetsPage = findViewById(R.id.viewallButton);
         sendToAllPetsPage.setOnClickListener(new View.OnClickListener() {
