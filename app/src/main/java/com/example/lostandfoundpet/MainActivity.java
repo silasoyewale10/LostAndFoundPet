@@ -1,8 +1,5 @@
 package com.example.lostandfoundpet;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,28 +9,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
 import com.amazonaws.mobile.client.UserState;
 import com.amazonaws.mobile.client.UserStateDetails;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferService;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
-import com.amazonaws.services.s3.AmazonS3Client;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnSuccessListener;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.storage.s3.AWSS3StoragePlugin;
+import com.google.android.gms.location.LocationServices;
 
 public class MainActivity extends AppCompatActivity {
 
-    //for location services
-    private FusedLocationProviderClient fusedLocationClient;
+    private static final String TAG = "ThHollie";
+    private AWSAppSyncClient mAWSAppSyncClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
         // Sends User To Found Page
         Button sendtoFoundPage = findViewById(R.id.foundbutton);
         sendtoFoundPage.setOnClickListener(new View.OnClickListener() {
@@ -91,26 +82,59 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // S3 Storage
-        getApplicationContext().startService(new Intent(getApplicationContext(), TransferService.class));
 
+        View logout = findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = AWSMobileClient.getInstance().getUsername();
+                AWSMobileClient.getInstance().signOut();
 
+                AWSMobileClient.getInstance().initialize(MainActivity.this.getApplicationContext(), new Callback<UserStateDetails>() {
 
-        // COGNITO INITIALIZE
+                            @Override
+                            public void onResult(UserStateDetails userStateDetails) {
+                                Log.i("INIT", "onResult: " + userStateDetails.getUserState());
+                                if (userStateDetails.getUserState().equals(UserState.SIGNED_OUT)) {
+                                    AWSMobileClient.getInstance().showSignIn(MainActivity.this, new Callback<UserStateDetails>() {
+
+                                        @Override
+                                        public void onResult(UserStateDetails result) {
+                                            Log.d(TAG, "onResult: " + result.getUserState());
+
+                                        }
+
+                                        @Override
+                                        public void onError(Exception e) {
+                                            Log.e(TAG, "onError: ", e);
+                                        }
+                                    });
+                                }
+                            }
+
+                            @Override
+                            public void onError(Exception e) {
+                                Log.e("INIT", "Initialization error.", e);
+                            }
+                        }
+                );
+
+            }
+        });
+
+        //TODO Put this code into a method
         AWSMobileClient.getInstance().initialize(getApplicationContext(), new Callback<UserStateDetails>() {
 
                     @Override
                     public void onResult(UserStateDetails userStateDetails) {
                         Log.i("INIT", "onResult: " + userStateDetails.getUserState());
-                        if(userStateDetails.getUserState().equals(UserState.SIGNED_OUT)){
-                            // 'this' refers the the current active activity
+                        if (userStateDetails.getUserState().equals(UserState.SIGNED_OUT)) {
                             AWSMobileClient.getInstance().showSignIn(MainActivity.this, new Callback<UserStateDetails>() {
+
                                 @Override
                                 public void onResult(UserStateDetails result) {
                                     Log.d(TAG, "onResult: " + result.getUserState());
-                                    if(result.getUserState().equals(UserState.SIGNED_IN)){
-                                        uploadWithTransferUtility();
-                                    }
+
                                 }
 
                                 @Override
@@ -125,91 +149,62 @@ public class MainActivity extends AppCompatActivity {
                     public void onError(Exception e) {
                         Log.e("INIT", "Initialization error.", e);
                     }
-
                 }
         );
 
-    }
-
-    // Part of S3
-    public void uploadWithTransferUtility() {
-
-        TransferUtility transferUtility =
-                TransferUtility.builder()
-                        .context(getApplicationContext())
-                        .awsConfiguration(AWSMobileClient.getInstance().getConfiguration())
-                        .s3Client(new AmazonS3Client(AWSMobileClient.getInstance()))
-                        .build();
-
-        File file = new File(getApplicationContext().getFilesDir(), "sample.txt");
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-            writer.append("PET APP!");
-            writer.close();
-        }
-        catch(Exception e) {
-            Log.e(TAG, e.getMessage());
-        }
-
-        TransferObserver uploadObserver =
-                transferUtility.upload(
-                        "public/sample.txt",
-                        new File(getApplicationContext().getFilesDir(),"sample.txt"));
-
-        // Attach a listener to the observer to get state update and progress notifications
-        uploadObserver.setTransferListener(new TransferListener() {
-
+        AWSMobileClient.getInstance().initialize(getApplicationContext(), new Callback<UserStateDetails>() {
             @Override
-            public void onStateChanged(int id, TransferState state) {
-                if (TransferState.COMPLETED == state) {
-                    // Handle a completed upload.
+            public void onResult(UserStateDetails userStateDetails) {
+                try {
+                    Amplify.addPlugin(new AWSS3StoragePlugin());
+                    Amplify.configure(getApplicationContext());
+                    Log.i("StorageQuickstart", "All set and ready to go!");
+                } catch (Exception e) {
+                    Log.e("StorageQuickstart", e.getMessage());
                 }
             }
 
-            @Override
-            public void onProgressChanged(int id, long bytesCurrent, long bytesTotal) {
-                float percentDonef = ((float) bytesCurrent / (float) bytesTotal) * 100;
-                int percentDone = (int)percentDonef;
-
-                Log.d(TAG, "ID:" + id + " bytesCurrent: " + bytesCurrent
-                        + " bytesTotal: " + bytesTotal + " " + percentDone + "%");
-            }
 
             @Override
-            public void onError(int id, Exception ex) {
-                // Handle errors
+            public void onError(Exception e) {
+                Log.e("StorageQuickstart", "Initialization error.", e);
             }
-
         });
 
-        // If you prefer to poll for the data, instead of attaching a
-        // listener, check for the state and progress in the observer.
-        if (TransferState.COMPLETED == uploadObserver.getState()) {
-            // Handle a completed upload.
-        }
 
-        Log.d(TAG, "Bytes Transferred: " + uploadObserver.getBytesTransferred());
-        Log.d(TAG, "Bytes Total: " + uploadObserver.getBytesTotal());
-    }
-
-    public void getUserLocation() {
-
-
-
-        fusedLocationClient.getLastLocation()
-                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                        @Override
-                        public void onSuccess(Location location) {
-                            // Got last known location. In some rare situations this can be null.
-                            if (location != null) {
-                                // Logic to handle location object
+                    @Override
+                    public void onResult(UserStateDetails userStateDetails){
+            Log.i("INIT", "onResult: " + userStateDetails.getUserState());
+            if (userStateDetails.getUserState().equals(UserState.SIGNED_OUT)) {
+                // 'this' refers the the current active activity
+                AWSMobileClient.getInstance().showSignIn(MainActivity.this, new Callback<UserStateDetails>() {
+                            @Override
+                            public void onResult(UserStateDetails result) {
+                                Log.d(TAG, "onResult: " + result.getUserState());
+                                if (result.getUserState().equals(UserState.SIGNED_IN)) {
+                                    uploadWithTransferUtility();
+                                }
                             }
+
+
+                            @Override
+                            public void onError(Exception e) {
+                                Log.e("INIT", "Initialization error.", e);
+                            }
+
                         }
-                    });
+                );
 
 
-
+            }
+        }
     }
-
 }
+
+
+
+
+
+
+
 
