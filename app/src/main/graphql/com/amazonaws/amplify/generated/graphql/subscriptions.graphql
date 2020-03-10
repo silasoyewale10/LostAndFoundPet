@@ -1,25 +1,5 @@
 # this is an auto generated file. This will be overwritten
-<<<<<<< HEAD
-subscription OnCreateTodo {
-  onCreateTodo {
-    id
-    name
-    description
-  }
-}
-subscription OnUpdateTodo {
-  onUpdateTodo {
-    id
-    name
-    description
-  }
-}
-subscription OnDeleteTodo {
-  onDeleteTodo {
-    id
-    name
-    description
-=======
+
 subscription OnCreateBlog {
   onCreateBlog {
     id
@@ -168,6 +148,6 @@ subscription OnDeleteComment {
         nextToken
       }
     }
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+
   }
 }

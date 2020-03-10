@@ -1,34 +1,5 @@
 # this is an auto generated file. This will be overwritten
-<<<<<<< HEAD
-mutation CreateTodo(
-  $input: CreateTodoInput!
-  $condition: ModelTodoConditionInput
-) {
-  createTodo(input: $input, condition: $condition) {
-    id
-    name
-    description
-  }
-}
-mutation UpdateTodo(
-  $input: UpdateTodoInput!
-  $condition: ModelTodoConditionInput
-) {
-  updateTodo(input: $input, condition: $condition) {
-    id
-    name
-    description
-  }
-}
-mutation DeleteTodo(
-  $input: DeleteTodoInput!
-  $condition: ModelTodoConditionInput
-) {
-  deleteTodo(input: $input, condition: $condition) {
-    id
-    name
-    description
-=======
+
 mutation CreateBlog(
   $input: CreateBlogInput!
   $condition: ModelBlogConditionInput
@@ -204,6 +175,5 @@ mutation DeleteComment(
         nextToken
       }
     }
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
   }
 }
