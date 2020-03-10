@@ -16,11 +16,8 @@
                 "description": null,
                 "fields": [
                     {
-<<<<<<< HEAD
-                        "name": "getTodo",
-=======
+
                         "name": "getBlog",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "args": [
                             {
@@ -40,22 +37,16 @@
                         ],
                         "type": {
                             "kind": "OBJECT",
-<<<<<<< HEAD
-                            "name": "Todo",
-=======
+
                             "name": "Blog",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "isDeprecated": false,
                         "deprecationReason": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "listTodos",
-=======
+
                         "name": "listBlogs",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "args": [
                             {
@@ -63,11 +54,8 @@
                                 "description": null,
                                 "type": {
                                     "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                                    "name": "ModelTodoFilterInput",
-=======
+
                                     "name": "ModelBlogFilterInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                                     "ofType": null
                                 },
                                 "defaultValue": null
@@ -95,9 +83,6 @@
                         ],
                         "type": {
                             "kind": "OBJECT",
-<<<<<<< HEAD
-                            "name": "ModelTodoConnection",
-=======
                             "name": "ModelBlogConnection",
                             "ofType": null
                         },
@@ -239,7 +224,6 @@
                         "type": {
                             "kind": "OBJECT",
                             "name": "ModelCommentConnection",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "isDeprecated": false,
@@ -263,11 +247,7 @@
             },
             {
                 "kind": "OBJECT",
-<<<<<<< HEAD
-                "name": "Todo",
-=======
                 "name": "Blog",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "description": null,
                 "fields": [
                     {
@@ -303,14 +283,6 @@
                         "deprecationReason": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "description",
-                        "description": null,
-                        "args": [],
-                        "type": {
-                            "kind": "SCALAR",
-                            "name": "String",
-=======
                         "name": "posts",
                         "description": null,
                         "args": [
@@ -358,7 +330,6 @@
                         "type": {
                             "kind": "OBJECT",
                             "name": "ModelPostConnection",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "isDeprecated": false,
@@ -382,11 +353,7 @@
             },
             {
                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                "name": "ModelTodoFilterInput",
-=======
                 "name": "ModelPostFilterInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "description": null,
                 "fields": null,
                 "inputFields": [
@@ -401,21 +368,7 @@
                         "defaultValue": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "name",
-                        "description": null,
-                        "type": {
-                            "kind": "INPUT_OBJECT",
-                            "name": "ModelStringInput",
-                            "ofType": null
-                        },
-                        "defaultValue": null
-                    },
-                    {
-                        "name": "description",
-=======
                         "name": "title",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "type": {
                             "kind": "INPUT_OBJECT",
@@ -432,11 +385,7 @@
                             "name": null,
                             "ofType": {
                                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                                "name": "ModelTodoFilterInput",
-=======
                                 "name": "ModelPostFilterInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                                 "ofType": null
                             }
                         },
@@ -450,11 +399,7 @@
                             "name": null,
                             "ofType": {
                                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                                "name": "ModelTodoFilterInput",
-=======
                                 "name": "ModelPostFilterInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                                 "ofType": null
                             }
                         },
@@ -465,11 +410,7 @@
                         "description": null,
                         "type": {
                             "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                            "name": "ModelTodoFilterInput",
-=======
                             "name": "ModelPostFilterInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "defaultValue": null
@@ -931,13 +872,6 @@
                         "defaultValue": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "size",
-                        "description": null,
-                        "type": {
-                            "kind": "INPUT_OBJECT",
-                            "name": "ModelSizeInput",
-=======
                         "name": "size",
                         "description": null,
                         "type": {
@@ -1978,7 +1912,7 @@
                         "type": {
                             "kind": "INPUT_OBJECT",
                             "name": "ModelPostConditionInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+
                             "ofType": null
                         },
                         "defaultValue": null
@@ -1989,32 +1923,7 @@
                 "possibleTypes": null
             },
             {
-<<<<<<< HEAD
-                "kind": "OBJECT",
-                "name": "ModelTodoConnection",
-                "description": null,
-                "fields": [
-                    {
-                        "name": "items",
-                        "description": null,
-                        "args": [],
-                        "type": {
-                            "kind": "LIST",
-                            "name": null,
-                            "ofType": {
-                                "kind": "OBJECT",
-                                "name": "Todo",
-                                "ofType": null
-                            }
-                        },
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    },
-                    {
-                        "name": "nextToken",
-                        "description": null,
-                        "args": [],
-=======
+
                 "kind": "INPUT_OBJECT",
                 "name": "UpdatePostInput",
                 "description": null,
@@ -2037,20 +1946,11 @@
                     {
                         "name": "title",
                         "description": null,
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "type": {
                             "kind": "SCALAR",
                             "name": "String",
                             "ofType": null
                         },
-<<<<<<< HEAD
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    }
-                ],
-                "inputFields": null,
-                "interfaces": [],
-=======
                         "defaultValue": null
                     },
                     {
@@ -2065,131 +1965,10 @@
                     }
                 ],
                 "interfaces": null,
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "enumValues": null,
                 "possibleTypes": null
             },
             {
-<<<<<<< HEAD
-                "kind": "OBJECT",
-                "name": "Mutation",
-                "description": null,
-                "fields": [
-                    {
-                        "name": "createTodo",
-                        "description": null,
-                        "args": [
-                            {
-                                "name": "input",
-                                "description": null,
-                                "type": {
-                                    "kind": "NON_NULL",
-                                    "name": null,
-                                    "ofType": {
-                                        "kind": "INPUT_OBJECT",
-                                        "name": "CreateTodoInput",
-                                        "ofType": null
-                                    }
-                                },
-                                "defaultValue": null
-                            },
-                            {
-                                "name": "condition",
-                                "description": null,
-                                "type": {
-                                    "kind": "INPUT_OBJECT",
-                                    "name": "ModelTodoConditionInput",
-                                    "ofType": null
-                                },
-                                "defaultValue": null
-                            }
-                        ],
-                        "type": {
-                            "kind": "OBJECT",
-                            "name": "Todo",
-                            "ofType": null
-                        },
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    },
-                    {
-                        "name": "updateTodo",
-                        "description": null,
-                        "args": [
-                            {
-                                "name": "input",
-                                "description": null,
-                                "type": {
-                                    "kind": "NON_NULL",
-                                    "name": null,
-                                    "ofType": {
-                                        "kind": "INPUT_OBJECT",
-                                        "name": "UpdateTodoInput",
-                                        "ofType": null
-                                    }
-                                },
-                                "defaultValue": null
-                            },
-                            {
-                                "name": "condition",
-                                "description": null,
-                                "type": {
-                                    "kind": "INPUT_OBJECT",
-                                    "name": "ModelTodoConditionInput",
-                                    "ofType": null
-                                },
-                                "defaultValue": null
-                            }
-                        ],
-                        "type": {
-                            "kind": "OBJECT",
-                            "name": "Todo",
-                            "ofType": null
-                        },
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    },
-                    {
-                        "name": "deleteTodo",
-                        "description": null,
-                        "args": [
-                            {
-                                "name": "input",
-                                "description": null,
-                                "type": {
-                                    "kind": "NON_NULL",
-                                    "name": null,
-                                    "ofType": {
-                                        "kind": "INPUT_OBJECT",
-                                        "name": "DeleteTodoInput",
-                                        "ofType": null
-                                    }
-                                },
-                                "defaultValue": null
-                            },
-                            {
-                                "name": "condition",
-                                "description": null,
-                                "type": {
-                                    "kind": "INPUT_OBJECT",
-                                    "name": "ModelTodoConditionInput",
-                                    "ofType": null
-                                },
-                                "defaultValue": null
-                            }
-                        ],
-                        "type": {
-                            "kind": "OBJECT",
-                            "name": "Todo",
-                            "ofType": null
-                        },
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    }
-                ],
-                "inputFields": null,
-                "interfaces": [],
-=======
                 "kind": "INPUT_OBJECT",
                 "name": "DeletePostInput",
                 "description": null,
@@ -2207,17 +1986,12 @@
                     }
                 ],
                 "interfaces": null,
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "enumValues": null,
                 "possibleTypes": null
             },
             {
                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                "name": "CreateTodoInput",
-=======
                 "name": "CreateCommentInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "description": null,
                 "fields": null,
                 "inputFields": [
@@ -2232,42 +2006,21 @@
                         "defaultValue": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "name",
-                        "description": null,
-                        "type": {
-                            "kind": "NON_NULL",
-                            "name": null,
-                            "ofType": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            }
-=======
                         "name": "content",
                         "description": null,
                         "type": {
                             "kind": "SCALAR",
                             "name": "String",
                             "ofType": null
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         },
                         "defaultValue": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "description",
-                        "description": null,
-                        "type": {
-                            "kind": "SCALAR",
-                            "name": "String",
-=======
                         "name": "commentPostId",
                         "description": null,
                         "type": {
                             "kind": "SCALAR",
                             "name": "ID",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "defaultValue": null
@@ -2279,30 +2032,12 @@
             },
             {
                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                "name": "ModelTodoConditionInput",
-=======
                 "name": "ModelCommentConditionInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "description": null,
                 "fields": null,
                 "inputFields": [
                     {
-<<<<<<< HEAD
-                        "name": "name",
-                        "description": null,
-                        "type": {
-                            "kind": "INPUT_OBJECT",
-                            "name": "ModelStringInput",
-                            "ofType": null
-                        },
-                        "defaultValue": null
-                    },
-                    {
-                        "name": "description",
-=======
                         "name": "content",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "type": {
                             "kind": "INPUT_OBJECT",
@@ -2319,11 +2054,7 @@
                             "name": null,
                             "ofType": {
                                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                                "name": "ModelTodoConditionInput",
-=======
                                 "name": "ModelCommentConditionInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                                 "ofType": null
                             }
                         },
@@ -2337,11 +2068,7 @@
                             "name": null,
                             "ofType": {
                                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                                "name": "ModelTodoConditionInput",
-=======
                                 "name": "ModelCommentConditionInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                                 "ofType": null
                             }
                         },
@@ -2352,11 +2079,7 @@
                         "description": null,
                         "type": {
                             "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                            "name": "ModelTodoConditionInput",
-=======
                             "name": "ModelCommentConditionInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "defaultValue": null
@@ -2368,11 +2091,7 @@
             },
             {
                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                "name": "UpdateTodoInput",
-=======
                 "name": "UpdateCommentInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "description": null,
                 "fields": null,
                 "inputFields": [
@@ -2391,11 +2110,7 @@
                         "defaultValue": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "name",
-=======
                         "name": "content",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "type": {
                             "kind": "SCALAR",
@@ -2405,19 +2120,11 @@
                         "defaultValue": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "description",
-                        "description": null,
-                        "type": {
-                            "kind": "SCALAR",
-                            "name": "String",
-=======
                         "name": "commentPostId",
                         "description": null,
                         "type": {
                             "kind": "SCALAR",
                             "name": "ID",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "defaultValue": null
@@ -2429,11 +2136,7 @@
             },
             {
                 "kind": "INPUT_OBJECT",
-<<<<<<< HEAD
-                "name": "DeleteTodoInput",
-=======
                 "name": "DeleteCommentInput",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "description": null,
                 "fields": null,
                 "inputFields": [
@@ -2458,9 +2161,6 @@
                 "description": null,
                 "fields": [
                     {
-<<<<<<< HEAD
-                        "name": "onCreateTodo",
-=======
                         "name": "onCreateBlog",
                         "description": null,
                         "args": [],
@@ -2534,56 +2234,35 @@
                     },
                     {
                         "name": "onCreateComment",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "args": [],
                         "type": {
                             "kind": "OBJECT",
-<<<<<<< HEAD
-                            "name": "Todo",
-=======
                             "name": "Comment",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "isDeprecated": false,
                         "deprecationReason": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "onUpdateTodo",
-=======
                         "name": "onUpdateComment",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "args": [],
                         "type": {
                             "kind": "OBJECT",
-<<<<<<< HEAD
-                            "name": "Todo",
-=======
                             "name": "Comment",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "isDeprecated": false,
                         "deprecationReason": null
                     },
                     {
-<<<<<<< HEAD
-                        "name": "onDeleteTodo",
-=======
                         "name": "onDeleteComment",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                         "description": null,
                         "args": [],
                         "type": {
                             "kind": "OBJECT",
-<<<<<<< HEAD
-                            "name": "Todo",
-=======
                             "name": "Comment",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                             "ofType": null
                         },
                         "isDeprecated": false,
@@ -3502,32 +3181,6 @@
                 "possibleTypes": null
             },
             {
-<<<<<<< HEAD
-                "kind": "ENUM",
-                "name": "ModelSortDirection",
-                "description": null,
-                "fields": null,
-                "inputFields": null,
-                "interfaces": null,
-                "enumValues": [
-                    {
-                        "name": "ASC",
-                        "description": null,
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    },
-                    {
-                        "name": "DESC",
-                        "description": null,
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    }
-                ],
-                "possibleTypes": null
-            },
-            {
-=======
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
                 "kind": "INPUT_OBJECT",
                 "name": "ModelIntInput",
                 "description": null,
