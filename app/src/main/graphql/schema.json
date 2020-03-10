@@ -16,11 +16,7 @@
                 "description": null,
                 "fields": [
                     {
-<<<<<<< HEAD
-                        "name": "getTodo",
-=======
-                        "name": "getBlog",
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+               "name": "getBlog",
                         "description": null,
                         "args": [
                             {
