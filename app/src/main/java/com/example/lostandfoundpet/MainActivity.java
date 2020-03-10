@@ -15,6 +15,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
+import com.amazonaws.mobile.client.SignOutOptions;
 import com.amazonaws.mobile.client.UserState;
 import com.amazonaws.mobile.client.UserStateDetails;
 
@@ -27,6 +28,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
+    public String TAG = "stg.MainActivity";
     private FusedLocationProviderClient fusedLocationClient;
 
     @Override
@@ -66,10 +70,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button logOutButton = findViewById(R.id.logout);
+
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AWSMobileClient.getInstance().signOut(SignOutOptions.builder().signOutGlobally(true).build(), new Callback<Void>() {
+                    @Override
+                    public void onResult(final Void result) {
+
+                        Log.d(TAG, "signed-out");
+                        Intent i = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(i);
 
 
+                    }
 
+                    @Override
+                    public void onError(Exception e) {
+                        Log.e(TAG, "sign-out error", e);
+                    }
+                });
 
+            }
+        });
 
         // Sends User To Found Page
         Button sendtoFoundPage = findViewById(R.id.foundbutton);
@@ -85,19 +109,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
     }
 
     public void getUserLocation() {
-
-
 
         fusedLocationClient.getLastLocation()
                 .addOnSuccessListener(this, new OnSuccessListener<Location>() {
