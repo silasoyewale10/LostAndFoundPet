@@ -1,0 +1,20 @@
+{
+    "lostpet": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lostandfoundpet-lostpet-205147-authRole",
+            "UnauthRoleArn": "arn:aws:iam::769510211168:role/amplify-lostandfoundpet-lostpet-205147-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::769510211168:role/amplify-lostandfoundpet-lostpet-205147-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-lostandfoundpet-lostpet-205147-deployment",
+            "UnauthRoleName": "amplify-lostandfoundpet-lostpet-205147-unauthRole",
+            "StackName": "amplify-lostandfoundpet-lostpet-205147",
+            "StackId": "arn:aws:cloudformation:us-west-2:769510211168:stack/amplify-lostandfoundpet-lostpet-205147/8477dda0-6282-11ea-84c5-069045656416",
+            "AmplifyAppId": "d2mfis8lmioexh"
+        },
+        "categories": {
+            "auth": {
+                "lostandfoundpet78ad0757": {}
+            }
+        }
+    }
+}
