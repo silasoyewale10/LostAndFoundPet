@@ -11,8 +11,11 @@ projects:
         generatedFileName: ''
         docsFilePath: app/src/main/graphql/com/amazonaws/amplify/generated/graphql
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 extensions:
   amplify:
     version: 3
 >>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+=======
+>>>>>>> 8cb2724738b4a8d1767b85e8bb11e5ddee1c7fdd

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Todo @model {
   id: ID!
   name: String!
   description: String
 =======
+=======
+>>>>>>> 8cb2724738b4a8d1767b85e8bb11e5ddee1c7fdd
 type Blog @model {
   id: ID!
   name: String!
@@ -19,5 +22,8 @@ type Comment @model {
   id: ID!
   content: String
   post: Post @connection(name: "PostComments")
+<<<<<<< HEAD
 >>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+=======
+>>>>>>> 8cb2724738b4a8d1767b85e8bb11e5ddee1c7fdd
 }

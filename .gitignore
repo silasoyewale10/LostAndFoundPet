@@ -12,6 +12,7 @@ awsconfiguration.json
 amplifyconfiguration.json
 amplify-gradle-config.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 amplifyxc.config
 #amplify
 amplify/\#current-cloud-backend
@@ -188,3 +189,6 @@ amplify/team-provider-info.json
 =======
 amplifyxc.config
 >>>>>>> ad524fb9a71844b3e5b7d9abb627372ea93eab77
+=======
+amplifyxc.config
+>>>>>>> 8cb2724738b4a8d1767b85e8bb11e5ddee1c7fdd

@@ -16,7 +16,6 @@
                 "description": null,
                 "fields": [
                     {
-
                         "name": "getBlog",
                         "description": null,
                         "args": [
