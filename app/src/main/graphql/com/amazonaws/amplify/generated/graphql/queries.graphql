@@ -1,4 +1,5 @@
 # this is an auto generated file. This will be overwritten
+<<<<<<< HEAD
 query GetTodo($id: ID!) {
   getTodo(id: $id) {
     id
@@ -16,6 +17,107 @@ query ListTodos(
       id
       name
       description
+=======
+query GetBlog($id: ID!) {
+  getBlog(id: $id) {
+    id
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
+  }
+}
+query ListBlogs(
+  $filter: ModelBlogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetPost($id: ID!) {
+  getPost(id: $id) {
+    id
+    title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+query ListPosts(
+  $filter: ModelPostFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetComment($id: ID!) {
+  getComment(id: $id) {
+    id
+    content
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+query ListComments(
+  $filter: ModelCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      content
+      post {
+        id
+        title
+      }
+>>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
     }
     nextToken
   }
