@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lostfound": {
         "awscloudformation": {
             "AuthRoleName": "amplify-lostandfoundpet-lostfound-164210-authRole",
@@ -33,6 +34,19 @@
                 "lostandfoundpetb741d118": {}
 >>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
             }
+=======
+    "pete": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lostandfoundpet-pete-101355-authRole",
+            "UnauthRoleArn": "arn:aws:iam::767708033376:role/amplify-lostandfoundpet-pete-101355-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::767708033376:role/amplify-lostandfoundpet-pete-101355-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-lostandfoundpet-pete-101355-deployment",
+            "UnauthRoleName": "amplify-lostandfoundpet-pete-101355-unauthRole",
+            "StackName": "amplify-lostandfoundpet-pete-101355",
+            "StackId": "arn:aws:cloudformation:us-west-2:767708033376:stack/amplify-lostandfoundpet-pete-101355/86fc22a0-62f2-11ea-a192-0af6392a9a8a",
+            "AmplifyAppId": "d148uu73us6gwm"
+>>>>>>> ad524fb9a71844b3e5b7d9abb627372ea93eab77
         }
     }
 }

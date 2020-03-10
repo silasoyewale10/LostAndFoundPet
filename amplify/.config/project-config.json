@@ -1,9 +1,13 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "projectName": "lostandfoundpet",
 =======
     "projectName": "LostAndFoundPet",
 >>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+=======
+    "projectName": "LostAndFoundPet",
+>>>>>>> ad524fb9a71844b3e5b7d9abb627372ea93eab77
     "version": "3.0",
     "frontend": "android",
     "android": {

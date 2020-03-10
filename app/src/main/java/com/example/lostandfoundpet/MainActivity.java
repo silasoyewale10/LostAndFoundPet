@@ -1,8 +1,12 @@
 package com.example.lostandfoundpet;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +14,6 @@ import android.widget.Button;
 
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
-import com.amazonaws.mobile.client.SignInUIOptions;
 import com.amazonaws.mobile.client.UserState;
 import com.amazonaws.mobile.client.UserStateDetails;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
@@ -19,6 +22,9 @@ import com.amazonaws.mobileconnectors.s3.transferutility.TransferService;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -26,12 +32,29 @@ import java.io.FileWriter;
 
 public class MainActivity extends AppCompatActivity {
 
-    static String TAG = "pet.main";
+    //for location services
+    private FusedLocationProviderClient fusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        boolean permissionToAccessCoarseLocation = ActivityCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_COARSE_LOCATION)
+
+                   == PackageManager.PERMISSION_GRANTED;
+        if(!permissionToAccessCoarseLocation){
+            ActivityCompat.requestPermissions(this, new String[]{
+
+                Manifest.permission.ACCESS_COARSE_LOCATION}, 73);
+            }
+        else{
+            getUserLocation();
+        }
+
 
 
 
@@ -168,5 +191,25 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "Bytes Transferred: " + uploadObserver.getBytesTransferred());
         Log.d(TAG, "Bytes Total: " + uploadObserver.getBytesTotal());
     }
+
+    public void getUserLocation() {
+
+
+
+        fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            // Got last known location. In some rare situations this can be null.
+                            if (location != null) {
+                                // Logic to handle location object
+                            }
+                        }
+                    });
+
+
+
+    }
+
 }
 
