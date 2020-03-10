@@ -1,0 +1,18 @@
+projects:
+  lostandfoundpet:
+    schemaPath: app/src/main/graphql/schema.json
+    includes:
+      - app/src/main/graphql/**/*.graphql
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: ''
+        generatedFileName: ''
+        docsFilePath: app/src/main/graphql/com/amazonaws/amplify/generated/graphql
+<<<<<<< HEAD
+=======
+extensions:
+  amplify:
+    version: 3
+>>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af

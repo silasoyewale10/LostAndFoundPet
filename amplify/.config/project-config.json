@@ -1,0 +1,17 @@
+{
+<<<<<<< HEAD
+    "projectName": "lostandfoundpet",
+=======
+    "projectName": "LostAndFoundPet",
+>>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+    "version": "3.0",
+    "frontend": "android",
+    "android": {
+        "config": {
+            "ResDir": "app/src/main/res"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}

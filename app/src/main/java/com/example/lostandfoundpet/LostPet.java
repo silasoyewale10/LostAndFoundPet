@@ -17,7 +17,6 @@ public class LostPet extends AppCompatActivity {
 
 
 
-
         // Sends User To ALLPAGE
         Button sendToAllPetsPage = findViewById(R.id.viewallButton);
         sendToAllPetsPage.setOnClickListener(new View.OnClickListener() {
@@ -26,7 +25,7 @@ public class LostPet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent sentToAllPetsIntent = new Intent(LostPet.this, AllPets.class);
+                Intent sentToAllPetsIntent = new Intent(LostPet.this, AllFoundPets.class);
 
                 LostPet.this.startActivity(sentToAllPetsIntent);
 

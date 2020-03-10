@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+type Todo @model {
+  id: ID!
+  name: String!
+  description: String
+=======
+type Blog @model {
+  id: ID!
+  name: String!
+  posts: [Post] @connection(name: "BlogPosts")
+}
+type Post @model {
+  id: ID!
+  title: String!
+  blog: Blog @connection(name: "BlogPosts")
+  comments: [Comment] @connection(name: "PostComments")
+}
+type Comment @model {
+  id: ID!
+  content: String
+  post: Post @connection(name: "PostComments")
+>>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+}
