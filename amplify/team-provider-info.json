@@ -1,0 +1,20 @@
+{
+    "petenv": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lostandfoundpet-petenv-230749-authRole",
+            "UnauthRoleArn": "arn:aws:iam::918207092759:role/amplify-lostandfoundpet-petenv-230749-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::918207092759:role/amplify-lostandfoundpet-petenv-230749-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-lostandfoundpet-petenv-230749-deployment",
+            "UnauthRoleName": "amplify-lostandfoundpet-petenv-230749-unauthRole",
+            "StackName": "amplify-lostandfoundpet-petenv-230749",
+            "StackId": "arn:aws:cloudformation:us-west-2:918207092759:stack/amplify-lostandfoundpet-petenv-230749/7a5d5e90-6295-11ea-a7d5-025cd53975dc",
+            "AmplifyAppId": "d1re1e9rwnaqfc"
+        },
+        "categories": {
+            "auth": {
+                "lostandfoundpetb741d118": {}
+            }
+        }
+    }
+}
