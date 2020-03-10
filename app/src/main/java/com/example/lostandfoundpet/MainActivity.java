@@ -3,6 +3,8 @@ package com.example.lostandfoundpet;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,15 +27,24 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private FusedLocationProviderClient fusedLocationClient;
-
+    String cityName = " ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+        //location permission below
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         boolean permissionToAccessCoarseLocation = ActivityCompat.checkSelfPermission(
@@ -48,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             getUserLocation();
         }
+
 
 
 
@@ -95,22 +107,39 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+    //method to get user location
+    //Reference for GEOCODER - https://stackoverflow.com/questions/22323974/how-to-get-city-name-by-latitude-longitude-in-android
+    // https://developer.android.com/reference/android/location/Geocoder
+
     public void getUserLocation() {
 
-
-
         fusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                .addOnSuccessListener(MainActivity.this, new OnSuccessListener<Location>() {
                     @Override
                     public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
+
                         if (location != null) {
-                            // Logic to handle location object
+
+                            double lat = location.getLatitude();
+                            double longitude = location.getLongitude();
+                            Geocoder geocoder = new Geocoder(MainActivity.this.getApplicationContext(), Locale.getDefault());
+
+
+                            try {
+                                List<Address> addresses = geocoder.getFromLocation(lat, longitude, 1);
+                                cityName = addresses.get(0).getLocality();
+                                Log.i("tag",cityName);
+                                // String stateName = addresses.get(0).getAdminArea();
+
+
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 });
-
-
 
     }
 
