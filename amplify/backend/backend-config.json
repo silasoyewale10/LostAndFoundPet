@@ -1,0 +1,57 @@
+{
+	"api": {
+		"lostandfoundpet": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+<<<<<<< HEAD
+							"description": "",
+							"apiKeyExpirationDays": "30"
+=======
+							"description": "connecting to lostandfoundpet API",
+							"apiKeyExpirationDays": "365"
+>>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+						}
+					}
+				}
+			}
+		}
+	},
+<<<<<<< HEAD
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"auth": {
+		"lostandfoundpeta772d351": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"lostandfoundpet": {
+=======
+	"auth": {
+		"lostandfoundpetb741d118": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"storage": {
+		"petPictures": {
+>>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
