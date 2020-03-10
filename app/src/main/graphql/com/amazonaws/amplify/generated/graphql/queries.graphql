@@ -1,23 +1,4 @@
 # this is an auto generated file. This will be overwritten
-<<<<<<< HEAD
-query GetTodo($id: ID!) {
-  getTodo(id: $id) {
-    id
-    name
-    description
-  }
-}
-query ListTodos(
-  $filter: ModelTodoFilterInput
-  $limit: Int
-  $nextToken: String
-) {
-  listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
-    items {
-      id
-      name
-      description
-=======
 query GetBlog($id: ID!) {
   getBlog(id: $id) {
     id
@@ -117,7 +98,6 @@ query ListComments(
         id
         title
       }
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
     }
     nextToken
   }
