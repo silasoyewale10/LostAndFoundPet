@@ -3,6 +3,8 @@ package com.example.lostandfoundpet;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +54,15 @@ public class MyPetRecyclerViewAdapter extends RecyclerView.Adapter<MyPetRecycler
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Context context = v.getContext();
+                Intent sentToDetailsPage = new Intent(context, DetailPage.class);
+                // sentToDetailsPage.putExtra("mTitleView", mTitleView);
+                sentToDetailsPage.putExtra("mNameView", holder.mNameView.getText());
+                sentToDetailsPage.putExtra("mDetailsView", holder.mDetailsView.getText());
+                sentToDetailsPage.putExtra("mCityView", holder.mCityView.getText());
+
+                context.startActivity(sentToDetailsPage);
+
                 Log.i("tag", "itworked");
             }
         });
@@ -96,6 +107,14 @@ public class MyPetRecyclerViewAdapter extends RecyclerView.Adapter<MyPetRecycler
                 @Override
                 public void onClick(View view) {
                     mListener.onClickOnPetCallback(viewHolder.pet);
+
+
+
+
+
+
+
+
                 }
             });
             return viewHolder;
