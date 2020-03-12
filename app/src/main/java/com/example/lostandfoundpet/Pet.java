@@ -1,6 +1,8 @@
 package com.example.lostandfoundpet;
 
 
+import android.graphics.drawable.Drawable;
+
 public class Pet {
 
 
@@ -9,13 +11,13 @@ public class Pet {
 
     String name;
     String details;
-    String img;
+    Drawable img;
     String city;
 
 
 
 
-    public Pet(String name, String details, String img, String city){
+    public Pet(String name, String details, Drawable img, String city){
 
         this.name = name;
         this.details = details;
@@ -32,7 +34,7 @@ public class Pet {
         return details;
     }
 
-    public String getImg() {
+    public Drawable getImg() {
         return img;
     }
 
