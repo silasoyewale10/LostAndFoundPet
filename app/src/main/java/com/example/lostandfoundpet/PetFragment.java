@@ -73,11 +73,11 @@ public class PetFragment extends Fragment {
             }
             List<Pet> listOfPets = new ArrayList<>();
 
+            listOfPets.add(new Pet("Tanner", "dog", "./LostAndFoundPet/dogPictures/biggie.jpg", "Seattle"));
+            listOfPets.add(new Pet("Tanner", "dog", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMPV2METPeJU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMPV2METPeJU&tbnid=KypVIfrnXZbYeM&vet=12ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg..i&docid=PesX8IHCvvYULM&w=1280&h=720&q=dog&ved=2ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg", "Seattle"));
             listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
             listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
-            listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
-            listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
-            recyclerView.setAdapter(new MyPetRecyclerViewAdapter(listOfPets, mListener));
+            recyclerView.setAdapter(new MyPetRecyclerViewAdapter(listOfPets, (MyPetRecyclerViewAdapter.OnListFragmentInteractionListener) mListener));
         }
         return view;
     }

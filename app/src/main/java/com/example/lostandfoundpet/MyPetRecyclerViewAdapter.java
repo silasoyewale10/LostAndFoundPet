@@ -1,8 +1,8 @@
 package com.example.lostandfoundpet;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,27 +22,32 @@ import java.util.List;
  */
 public class MyPetRecyclerViewAdapter extends RecyclerView.Adapter<MyPetRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Pet> mValues;
+    private final List<Pet> petList;
     private final OnListFragmentInteractionListener mListener;
+    private TextView mCityView;
 
     public MyPetRecyclerViewAdapter(List<Pet> items, OnListFragmentInteractionListener listener) {
-        mValues = items;
+        petList = items;
         mListener = listener;
     }
 
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_pet, parent, false);
-        return new ViewHolder(view);
-    }
+
+
+//    @Override
+//    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//        View view = LayoutInflater.from(parent.getContext())
+//                .inflate(R.layout.fragment_pet, parent, false);
+//        final ViewHolder.OnListFragmentInteractionListener
+//        return new ViewHolder(view, mCityView);
+//    }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mNameView.setText(mValues.get(position).getName());
-        holder.mDetailsView.setText(mValues.get(position).getDetails());
-       //holder.mimgView.setImageResource(mValues.get(position).getImg());
+        holder.mItem = petList.get(position);
+        holder.mNameView.setText(petList.get(position).getName());
+        holder.mDetailsView.setText(petList.get(position).getDetails());
+        holder.mCityView.setText(petList.get(position).getCity());
+//       holder.mImgView.setImageResource(R.id.imageView);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,30 +57,66 @@ public class MyPetRecyclerViewAdapter extends RecyclerView.Adapter<MyPetRecycler
         });
     }
 
-    @Override
-    public int getItemCount() {
-        return mValues.size();
-    }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        public Pet pet;
         public final View mView;
         public final TextView mNameView;
         public final TextView mDetailsView;
-       // public final ImageView mimgView;
+        public final TextView mCityView;
+        public ImageView mImgView;
+
+        //        public final ImageView mimgView;
         public Pet mItem;
+//        public TextView mCityView;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
             mNameView = (TextView) view.findViewById(R.id.name);
             mDetailsView = (TextView) view.findViewById(R.id.details);
-           // mimgView = (ImageView) view.findViewById(R.id.img);
+            mImgView = (ImageView) view.findViewById(R.id.imageView);
+            mCityView = (TextView) view.findViewById(R.id.city);
 
+//            this.mCityView = mCityView;
+        }
+
+    }
+
+
+        @NonNull
+        @Override
+        public MyPetRecyclerViewAdapter.ViewHolder onCreateViewHolder( @NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.fragment_pet, parent, false);
+            //this gives me access to the view
+            final ViewHolder viewHolder = new ViewHolder(view);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mListener.onClickOnPetCallback(viewHolder.pet);
+                }
+            });
+            return viewHolder;
         }
 
         @Override
-        public String toString() {
-            return super.toString() + " '" + mDetailsView.getText() + "'";
+        public int getItemCount() {
+            return petList.size();
         }
-    }
+        public static interface OnListFragmentInteractionListener{
+            public void onClickOnPetCallback(Pet pet);
+        }
+
+
+//        @Override
+//        public String toString() {
+//            return super.toString() + " '" + mDetailsView.getText() + "'";
+//        }
+
+//    @Override
+//    public int getItemCount() {
+//        return petList.size();
+//    }
 }
