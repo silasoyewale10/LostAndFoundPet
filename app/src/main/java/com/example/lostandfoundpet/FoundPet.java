@@ -22,6 +22,8 @@ public class FoundPet extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found_pet);
+
+
         final Button buttonLoadImage = (Button)findViewById(R.id.loadimage);
         textTargetUri = (TextView)findViewById(R.id.targeturi);
         targetImage = (ImageView)findViewById(R.id.targetimage);
@@ -32,7 +34,7 @@ public class FoundPet extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_PICK,
                         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(intent, 0);
-                buttonLoadImage.setText("Add Details");
+               // buttonLoadImage.setText("Add Details");
             }});
     }
     @Override
