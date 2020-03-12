@@ -1,10 +1,18 @@
 package com.example.lostandfoundpet;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.drawable.IconCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import android.content.Context;
 import android.content.Intent;
+
+//import static android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,11 +53,19 @@ public class MyPetRecyclerViewAdapter extends RecyclerView.Adapter<MyPetRecycler
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+//        Bitmap bitmap = BitmapFactory.decodeFile("/Users/soyewale/Desktop/codefellows/401/LostAndFoundPet/dogPictures/biggie.jpg");
+
         holder.mItem = petList.get(position);
         holder.mNameView.setText(petList.get(position).getName());
         holder.mDetailsView.setText(petList.get(position).getDetails());
         holder.mCityView.setText(petList.get(position).getCity());
-//       holder.mImgView.setImageResource(R.id.imageView);
+
+//        int imageResource = Context.getResources().getIdentifier(petList.get(position).getImg());
+//        Drawable res = getResources().getDrawable(imageResource);
+
+
+        holder.mImgView.setImageDrawable(petList.get(position).getImg());
+
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

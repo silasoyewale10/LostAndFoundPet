@@ -1,6 +1,7 @@
 package com.example.lostandfoundpet;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -71,17 +72,74 @@ public class PetFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+
             List<Pet> listOfPets = new ArrayList<>();
 
-            listOfPets.add(new Pet("555 555 555", "Golden Retriever, younger looking very happy!", "./LostAndFoundPet/dogPictures/biggie.jpg", "Seattle"));
-            listOfPets.add(new Pet("Tanner", "dog", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMPV2METPeJU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMPV2METPeJU&tbnid=KypVIfrnXZbYeM&vet=12ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg..i&docid=PesX8IHCvvYULM&w=1280&h=720&q=dog&ved=2ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg", "Seattle"));
-            listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
-            listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
+
+            String PACKAGE_NAME = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME2 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME3 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME4 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME5 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME6 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME7 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME8 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME9 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME10 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME11 = context.getApplicationContext().getPackageName();
+
+
+
+            int imgId = getResources().getIdentifier(PACKAGE_NAME + ":drawable/" + "dedoggo", null, null);
+            int imgId2 = getResources().getIdentifier(PACKAGE_NAME2 + ":drawable/" + "oggo", null, null);
+            int imgId3 = getResources().getIdentifier(PACKAGE_NAME3 + ":drawable/" + "hal", null, null);
+            int imgId4 = getResources().getIdentifier(PACKAGE_NAME4 + ":drawable/" + "isabela", null, null);
+            int imgId5 = getResources().getIdentifier(PACKAGE_NAME5 + ":drawable/" + "kilo", null, null);
+            int imgId6 = getResources().getIdentifier(PACKAGE_NAME6 + ":drawable/" + "momma", null, null);
+            int imgId7 = getResources().getIdentifier(PACKAGE_NAME7 + ":drawable/" + "ripley", null, null);
+            int imgId8 = getResources().getIdentifier(PACKAGE_NAME8 + ":drawable/" + "queendog", null, null);
+            int imgId9 = getResources().getIdentifier(PACKAGE_NAME9 + ":drawable/" + "sea", null, null);
+            int imgId10 = getResources().getIdentifier(PACKAGE_NAME10 + ":drawable/" + "ttr", null, null);
+            int imgId11 = getResources().getIdentifier(PACKAGE_NAME11 + ":drawable/" + "toby", null, null);
+
+
+
+
+            Drawable res = getResources().getDrawable(imgId);
+            Drawable res2 = getResources().getDrawable(imgId2);
+            Drawable res3 = getResources().getDrawable(imgId3);
+            Drawable res4 = getResources().getDrawable(imgId4);
+            Drawable res5 = getResources().getDrawable(imgId5);
+            Drawable res6 = getResources().getDrawable(imgId6);
+            Drawable res7 = getResources().getDrawable(imgId7);
+            Drawable res8 = getResources().getDrawable(imgId8);
+            Drawable res9 = getResources().getDrawable(imgId9);
+            Drawable res10 = getResources().getDrawable(imgId10);
+            Drawable res11 = getResources().getDrawable(imgId11);
+
+
+            listOfPets.add(new Pet("Tanner", "12345869", res, "Seattle"));
+            listOfPets.add(new Pet("Tar", "329948484", res2, "Seattle"));
+//            listOfPets.add(new Pet("elok",  "3349586958", res3, "Seattle"));
+//            listOfPets.add(new Pet("remmy", "271737434", res4, "lawton"));
+//            listOfPets.add(new Pet("luke", "0994845743", res5, "kirkland"));
+            listOfPets.add(new Pet("eyan", "949573244", res6, "chakisha"));
+//            listOfPets.add(new Pet("kkr", "119383947", res7, "edmund"));
+//            listOfPets.add(new Pet("awk", "998483765", res8, "oklahoma"));
+            listOfPets.add(new Pet("qwlk", "199846209", res9, "dallas"));
+//            listOfPets.add(new Pet("seew", "654752098", res10, "houston"));
+            listOfPets.add(new Pet("teef", "495399432", res11, "austin"));
+
+
+//            listOfPets.add(new Pet("Tanner", "dog", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMPV2METPeJU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMPV2METPeJU&tbnid=KypVIfrnXZbYeM&vet=12ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg..i&docid=PesX8IHCvvYULM&w=1280&h=720&q=dog&ved=2ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg", "Seattle"));
+//            listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
+//            listOfPets.add(new Pet("Tanner", "dog", "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "Seattle"));
             recyclerView.setAdapter(new MyPetRecyclerViewAdapter(listOfPets, (MyPetRecyclerViewAdapter.OnListFragmentInteractionListener) mListener));
+
+//            return view;
         }
         return view;
     }
-
 
     @Override
     public void onAttach(Context context) {

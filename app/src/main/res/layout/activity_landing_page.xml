@@ -40,8 +40,8 @@
     <fragment
         android:id="@+id/fragment"
         android:name="com.example.lostandfoundpet.PetFragment"
-        android:layout_width="239dp"
-        android:layout_height="366dp"
+        android:layout_width="407dp"
+        android:layout_height="479dp"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="@+id/recyclerView"
         app:layout_constraintStart_toStartOf="@+id/recyclerView"
