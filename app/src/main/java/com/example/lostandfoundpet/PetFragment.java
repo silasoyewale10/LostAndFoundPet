@@ -87,6 +87,8 @@ public class PetFragment extends Fragment {
             String PACKAGE_NAME9 = context.getApplicationContext().getPackageName();
             String PACKAGE_NAME10 = context.getApplicationContext().getPackageName();
             String PACKAGE_NAME11 = context.getApplicationContext().getPackageName();
+            String PACKAGE_NAME12 = context.getApplicationContext().getPackageName();
+
 
 
 
@@ -101,6 +103,7 @@ public class PetFragment extends Fragment {
             int imgId9 = getResources().getIdentifier(PACKAGE_NAME9 + ":drawable/" + "sea", null, null);
             int imgId10 = getResources().getIdentifier(PACKAGE_NAME10 + ":drawable/" + "ttr", null, null);
             int imgId11 = getResources().getIdentifier(PACKAGE_NAME11 + ":drawable/" + "toby", null, null);
+            int imgId12 = getResources().getIdentifier(PACKAGE_NAME12 + ":drawable/" + "biggie_background", null, null);
 
 
 
@@ -116,9 +119,11 @@ public class PetFragment extends Fragment {
             Drawable res9 = getResources().getDrawable(imgId9);
             Drawable res10 = getResources().getDrawable(imgId10);
             Drawable res11 = getResources().getDrawable(imgId11);
+            Drawable res12 = getResources().getDrawable(imgId12);
 
 
-            listOfPets.add(new Pet("Tanner", "12345869", res, "Seattle"));
+
+            listOfPets.add(new Pet("Tanner", "458998669", res, "Seattle"));
             listOfPets.add(new Pet("Tar", "329948484", res2, "Seattle"));
 //            listOfPets.add(new Pet("elok",  "3349586958", res3, "Seattle"));
 //            listOfPets.add(new Pet("remmy", "271737434", res4, "lawton"));
@@ -129,6 +134,7 @@ public class PetFragment extends Fragment {
             listOfPets.add(new Pet("qwlk", "199846209", res9, "dallas"));
 //            listOfPets.add(new Pet("seew", "654752098", res10, "houston"));
             listOfPets.add(new Pet("teef", "495399432", res11, "austin"));
+            listOfPets.add(new Pet("bingo", "123456789", res12, "seattle"));
 
 
 //            listOfPets.add(new Pet("Tanner", "dog", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMPV2METPeJU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMPV2METPeJU&tbnid=KypVIfrnXZbYeM&vet=12ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg..i&docid=PesX8IHCvvYULM&w=1280&h=720&q=dog&ved=2ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg", "Seattle"));
