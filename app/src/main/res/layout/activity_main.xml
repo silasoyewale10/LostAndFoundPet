@@ -10,24 +10,25 @@
         android:id="@+id/textView5"
         android:layout_width="361dp"
         android:layout_height="146dp"
+        android:layout_marginTop="32dp"
+
         android:text="Lost and Found Pet"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.51" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="239dp"
         android:layout_height="118dp"
-        android:layout_marginTop="76dp"
         android:text="Did you find or lose a pet!?"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/foundbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -35,21 +36,24 @@
         android:id="@+id/lostbutton"
         android:layout_width="142dp"
         android:layout_height="91dp"
-        android:layout_marginTop="72dp"
         android:text="Lost"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
         app:layout_constraintEnd_toStartOf="@+id/foundbutton"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.788" />
 
     <Button
         android:id="@+id/foundbutton"
         android:layout_width="149dp"
         android:layout_height="93dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
         android:text="found"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lostbutton"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
@@ -57,13 +61,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="51dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="86dp"
         android:text="logout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foundbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/foundbutton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="140dp"
+        android:layout_height="58dp"
+        android:text="userview"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

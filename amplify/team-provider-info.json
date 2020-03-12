@@ -1,71 +1,20 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "lostfound": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-lostandfoundpet-lostfound-164210-authRole",
-            "UnauthRoleArn": "arn:aws:iam::205522334308:role/amplify-lostandfoundpet-lostfound-164210-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::205522334308:role/amplify-lostandfoundpet-lostfound-164210-authRole",
-            "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-lostandfoundpet-lostfound-164210-deployment",
-            "UnauthRoleName": "amplify-lostandfoundpet-lostfound-164210-unauthRole",
-            "StackName": "amplify-lostandfoundpet-lostfound-164210",
-            "StackId": "arn:aws:cloudformation:us-west-2:205522334308:stack/amplify-lostandfoundpet-lostfound-164210/995856a0-625f-11ea-9160-0a5d164d0af8",
-            "AmplifyAppId": "d27ilhvjlwwxif"
-        },
-        "categories": {
-            "auth": {
-                "lostandfoundpeta772d351": {}
-=======
-    "petenv": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-lostandfoundpet-petenv-230749-authRole",
-            "UnauthRoleArn": "arn:aws:iam::918207092759:role/amplify-lostandfoundpet-petenv-230749-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::918207092759:role/amplify-lostandfoundpet-petenv-230749-authRole",
-            "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-lostandfoundpet-petenv-230749-deployment",
-            "UnauthRoleName": "amplify-lostandfoundpet-petenv-230749-unauthRole",
-            "StackName": "amplify-lostandfoundpet-petenv-230749",
-            "StackId": "arn:aws:cloudformation:us-west-2:918207092759:stack/amplify-lostandfoundpet-petenv-230749/7a5d5e90-6295-11ea-a7d5-025cd53975dc",
-            "AmplifyAppId": "d1re1e9rwnaqfc"
-        },
-        "categories": {
-            "auth": {
-                "lostandfoundpetb741d118": {}
->>>>>>> 5efb70a65dc9d8eda4ab547bc37f8502ae4c75af
-            }
-=======
-    "pete": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-lostandfoundpet-pete-101355-authRole",
-            "UnauthRoleArn": "arn:aws:iam::767708033376:role/amplify-lostandfoundpet-pete-101355-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::767708033376:role/amplify-lostandfoundpet-pete-101355-authRole",
-            "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-lostandfoundpet-pete-101355-deployment",
-            "UnauthRoleName": "amplify-lostandfoundpet-pete-101355-unauthRole",
-            "StackName": "amplify-lostandfoundpet-pete-101355",
-            "StackId": "arn:aws:cloudformation:us-west-2:767708033376:stack/amplify-lostandfoundpet-pete-101355/86fc22a0-62f2-11ea-a192-0af6392a9a8a",
-            "AmplifyAppId": "d148uu73us6gwm"
->>>>>>> ad524fb9a71844b3e5b7d9abb627372ea93eab77
-=======
     "lostpet": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-lostandfoundpet-lostpet-205147-authRole",
-            "UnauthRoleArn": "arn:aws:iam::769510211168:role/amplify-lostandfoundpet-lostpet-205147-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::769510211168:role/amplify-lostandfoundpet-lostpet-205147-authRole",
+            "AuthRoleName": "amplify-lostpet-lostpet-173455-authRole",
+            "UnauthRoleArn": "arn:aws:iam::205522334308:role/amplify-lostpet-lostpet-173455-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::205522334308:role/amplify-lostpet-lostpet-173455-authRole",
             "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-lostandfoundpet-lostpet-205147-deployment",
-            "UnauthRoleName": "amplify-lostandfoundpet-lostpet-205147-unauthRole",
-            "StackName": "amplify-lostandfoundpet-lostpet-205147",
-            "StackId": "arn:aws:cloudformation:us-west-2:769510211168:stack/amplify-lostandfoundpet-lostpet-205147/8477dda0-6282-11ea-84c5-069045656416",
-            "AmplifyAppId": "d2mfis8lmioexh"
+            "DeploymentBucketName": "amplify-lostpet-lostpet-173455-deployment",
+            "UnauthRoleName": "amplify-lostpet-lostpet-173455-unauthRole",
+            "StackName": "amplify-lostpet-lostpet-173455",
+            "StackId": "arn:aws:cloudformation:us-west-2:205522334308:stack/amplify-lostpet-lostpet-173455/232aa9c0-6330-11ea-9eb6-0696e27486d4",
+            "AmplifyAppId": "d1014s810hz4u0"
         },
         "categories": {
             "auth": {
-                "lostandfoundpet78ad0757": {}
+                "lostpet8bf8e400": {}
             }
->>>>>>> 8cb2724738b4a8d1767b85e8bb11e5ddee1c7fdd
         }
     }
 }

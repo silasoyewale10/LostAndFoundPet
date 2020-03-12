@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "lostandfoundpeta772d351_identitypool_a772d351",
+    "identityPoolName": "lostpet8bf8e400_identitypool_8bf8e400",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "lostana772d351",
-    "userPoolName": "lostandfoundpeta772d351_userpool_a772d351",
+    "resourceNameTruncated": "lostpe8bf8e400",
+    "userPoolName": "lostpet8bf8e400_userpool_8bf8e400",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,9 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "lostana772d351_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "lostpe8bf8e400_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "lostandfoundpeta772d351",
+    "resourceName": "lostpet8bf8e400",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

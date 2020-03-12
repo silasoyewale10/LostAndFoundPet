@@ -100,7 +100,7 @@ Resources:
   # Created to allow the UserPool SMS Config to publish via the Simple Notification Service during MFA Process
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, 'lostana772d351_sns-role', !Join ['',[ 'sns', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, 'lostpe8bf8e400_sns-role', !Join ['',[ 'sns', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"
         Statement: 
@@ -112,10 +112,10 @@ Resources:
               - "sts:AssumeRole"
             Condition: 
               StringEquals:
-                sts:ExternalId: lostana772d351_role_external_id
+                sts:ExternalId: lostpe8bf8e400_role_external_id
       Policies: 
         - 
-          PolicyName: lostana772d351-sns-policy
+          PolicyName: lostpe8bf8e400-sns-policy
           PolicyDocument: 
             Version: "2012-10-17"
             Statement: 
@@ -161,7 +161,7 @@ Resources:
       SmsVerificationMessage: !Ref smsVerificationMessage
       SmsConfiguration: 
         SnsCallerArn: !GetAtt SNSRole.Arn
-        ExternalId: lostana772d351_role_external_id
+        ExternalId: lostpe8bf8e400_role_external_id
     
   
   UserPoolClientWeb:
@@ -169,7 +169,7 @@ Resources:
   # Depends on UserPool for ID reference
     Type: "AWS::Cognito::UserPoolClient"
     Properties:
-      ClientName: lostana772d351_app_clientWeb
+      ClientName: lostpe8bf8e400_app_clientWeb
       
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
       UserPoolId: !Ref UserPool
@@ -179,7 +179,7 @@ Resources:
   # Depends on UserPool for ID reference
     Type: "AWS::Cognito::UserPoolClient"
     Properties:
-      ClientName: lostana772d351_app_client
+      ClientName: lostpe8bf8e400_app_client
       
       GenerateSecret: !Ref userpoolClientGenerateSecret
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
@@ -244,7 +244,7 @@ Resources:
   # Marked as depending on UserPoolClientRole for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: lostana772d351_userpoolclient_lambda_iam_policy
+      PolicyName: lostpe8bf8e400_userpoolclient_lambda_iam_policy
       Roles: 
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -261,7 +261,7 @@ Resources:
   # Marked as depending on UserPoolClientLambdaPolicy for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: lostana772d351_userpoolclient_lambda_log_policy
+      PolicyName: lostpe8bf8e400_userpoolclient_lambda_log_policy
       Roles: 
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -301,7 +301,7 @@ Resources:
   # Always created
     Type: AWS::Cognito::IdentityPool
     Properties: 
-      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'lostandfoundpeta772d351_identitypool_a772d351', !Join ['',['lostandfoundpeta772d351_identitypool_a772d351', '__', !Ref env]]]
+      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'lostpet8bf8e400_identitypool_8bf8e400', !Join ['',['lostpet8bf8e400_identitypool_8bf8e400', '__', !Ref env]]]
       
       CognitoIdentityProviders:
         - ClientId:  !Ref UserPoolClient
