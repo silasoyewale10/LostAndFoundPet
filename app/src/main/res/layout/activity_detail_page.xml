@@ -11,18 +11,19 @@
         android:layout_width="226dp"
         android:layout_height="102dp"
         android:text="Details Here"
+        android:textAlignment="center"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="40dp" />
+        tools:layout_editor_absoluteY="52dp" />
 
     <TextView
         android:id="@+id/detailsTextView"
         android:layout_width="331dp"
         android:layout_height="133dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:text="Details"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,21 +39,21 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="277dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="4dp"
-        android:text="CONTACT INFO"
+        android:layout_width="271dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="28dp"
+        android:text="CONTACT INFO:"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailsTextView" />
 
@@ -60,12 +61,13 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="DETAILS"
+        android:layout_marginTop="24dp"
+        android:text="DETAILS:"
+        android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.399"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/City" />
 

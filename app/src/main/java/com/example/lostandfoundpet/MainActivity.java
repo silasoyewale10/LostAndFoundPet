@@ -374,10 +374,6 @@ public class MainActivity extends AppCompatActivity {
 //            getUserLocation();
         }
 
-
-
-
-
         // Sends User To Lost Page
         Button sendToLostPage = findViewById(R.id.lostbutton);
         sendToLostPage.setOnClickListener(new View.OnClickListener() {

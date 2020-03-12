@@ -8,20 +8,23 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="401dp"
-        android:layout_height="137dp"
+        android:layout_width="338dp"
+        android:layout_height="123dp"
         android:layout_marginTop="16dp"
         android:text="Losing a pet can be terrifiying, thank you for helping!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Details"
@@ -29,11 +32,12 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Contact Info"
@@ -46,23 +50,25 @@
         android:id="@+id/loadimage"
         android:layout_width="154dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#2196F3"
         android:text="Upload Picture"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
     <ImageView
         android:id="@+id/targetimage"
-        android:layout_width="170dp"
-        android:layout_height="163dp"
+        android:layout_width="156dp"
+        android:layout_height="129dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loadimage"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
         android:id="@+id/targeturi"
@@ -75,13 +81,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/targetimage"
-        app:layout_constraintVertical_bias="0.613"
+        app:layout_constraintVertical_bias="0.0"
         tools:visibility="invisible" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="177dp"
-        android:layout_height="94dp"
+        android:layout_width="154dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="68dp"
         android:backgroundTint="#2196F3"
         android:onClick="displayToastMessage"
@@ -90,6 +96,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/targetimage"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.805" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
