@@ -7,10 +7,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 public class FoundPet extends AppCompatActivity {
     TextView textTargetUri;
     ImageView targetImage;
@@ -49,4 +52,23 @@ public class FoundPet extends AppCompatActivity {
             }
         }
     }
+
+
+// reference http://code2care.org/pages/how-to-display-toast-on-button-click-android/?pages/how-to-display-toast-on-button-click-android
+    public void toastMsg(String msg) {
+
+        Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
+        toast.show();
+        toast.setGravity(Gravity.CENTER | Gravity.CENTER_HORIZONTAL, 0, 0);
+
+    }
+
+    public void displayToastMessage(View v) {
+
+        toastMsg("SUBMITTED! THANK YOU!");
+
+    }
+
+
+
 }

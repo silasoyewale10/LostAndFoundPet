@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FoundPet">
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="401dp"
@@ -40,32 +41,55 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
     <Button
         android:id="@+id/loadimage"
-        android:layout_width="179dp"
-        android:layout_height="61dp"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#2196F3"
         android:text="Upload Picture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
     <ImageView
         android:id="@+id/targetimage"
-        android:layout_width="376dp"
-        android:layout_height="301dp"
+        android:layout_width="170dp"
+        android:layout_height="163dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loadimage"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_launcher_foreground" />
+
     <TextView
         android:id="@+id/targeturi"
         android:layout_width="100dp"
         android:layout_height="41dp"
         android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetimage"
+        app:layout_constraintVertical_bias="0.613"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="177dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="displayToastMessage"
+        android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/targetimage" />
+        app:layout_constraintTop_toBottomOf="@+id/targetimage"
+        app:layout_constraintVertical_bias="0.104" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

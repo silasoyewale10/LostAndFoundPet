@@ -75,6 +75,7 @@ public class PetFragment extends Fragment {
 
             List<Pet> listOfPets = new ArrayList<>();
 
+
             String PACKAGE_NAME = context.getApplicationContext().getPackageName();
             String PACKAGE_NAME2 = context.getApplicationContext().getPackageName();
             String PACKAGE_NAME3 = context.getApplicationContext().getPackageName();
