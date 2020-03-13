@@ -23,10 +23,10 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="239dp"
-        android:layout_height="118dp"
-        android:layout_marginTop="88dp"
-        android:text="Did you find or lose a pet!?"
+        android:layout_width="247dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="68dp"
+        android:text="Did you find or lose a pet?"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,38 +35,52 @@
 
     <Button
         android:id="@+id/lostbutton"
-        android:layout_width="142dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="72dp"
-        android:text="Lost"
-        app:layout_constraintEnd_toStartOf="@+id/foundbutton"
-        app:layout_constraintHorizontal_bias="0.503"
+        android:layout_width="128dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:background="#673AB7"
+        android:text="LOST"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/foundbutton"
-        android:layout_width="149dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="52dp"
-        android:text="found"
+        android:layout_width="128dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
+        android:background="#673AB7"
+        android:text="FOUND"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lostbutton"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="74dp"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="51dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="86dp"
-        android:text="logout"
+        android:background="#673AB7"
+        android:text="LOG OUT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foundbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/lostbutton"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/username"
