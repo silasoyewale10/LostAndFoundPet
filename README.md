@@ -20,6 +20,8 @@ https://wireframepro.mockflow.com/view/M1bbd724c2c25f8d5e7f17c27e2537b3e15835198
 
 ## Problem Domain
 
+This project solves the problem of a lost pet. Losing a pet can be devastating, and this product aims to reunite owners with lost pets utilizing their local community.
+
 ![](https://github.com/silasoyewale10/DebtEliminator/blob/developmentBranch/problemdomain.pdf)
 
 
