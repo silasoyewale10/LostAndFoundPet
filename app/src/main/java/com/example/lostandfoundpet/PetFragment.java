@@ -123,18 +123,18 @@ public class PetFragment extends Fragment {
 
 
 
-            listOfPets.add(new Pet("Tanner", "458998669", res, "Seattle"));
-            listOfPets.add(new Pet("Tar", "329948484", res2, "Seattle"));
+            listOfPets.add(new Pet("458998669", "Tanner", res, "Seattle"));
+            listOfPets.add(new Pet("329948484", "Tar", res2, "Seattle"));
 //            listOfPets.add(new Pet("elok",  "3349586958", res3, "Seattle"));
 //            listOfPets.add(new Pet("remmy", "271737434", res4, "lawton"));
 //            listOfPets.add(new Pet("luke", "0994845743", res5, "kirkland"));
-            listOfPets.add(new Pet("eyan", "949573244", res6, "chakisha"));
+            listOfPets.add(new Pet("949573244", "eyan", res6, "chakisha"));
 //            listOfPets.add(new Pet("kkr", "119383947", res7, "edmund"));
 //            listOfPets.add(new Pet("awk", "998483765", res8, "oklahoma"));
-            listOfPets.add(new Pet("qwlk", "199846209", res9, "dallas"));
+            listOfPets.add(new Pet("199846209", "qwlk", res9, "dallas"));
 //            listOfPets.add(new Pet("seew", "654752098", res10, "houston"));
-            listOfPets.add(new Pet("teef", "495399432", res11, "austin"));
-            listOfPets.add(new Pet("bingo", "123456789", res12, "seattle"));
+            listOfPets.add(new Pet("495399432", "teef", res11, "austin"));
+            listOfPets.add(new Pet("123456789", "bingo", res12, "seattle"));
 
 
 //            listOfPets.add(new Pet("Tanner", "dog", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMPV2METPeJU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMPV2METPeJU&tbnid=KypVIfrnXZbYeM&vet=12ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg..i&docid=PesX8IHCvvYULM&w=1280&h=720&q=dog&ved=2ahUKEwiamfX4ipToAhXhIjQIHTxFChQQMygAegUIARCNAg", "Seattle"));
